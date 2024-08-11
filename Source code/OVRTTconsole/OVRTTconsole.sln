@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OVRTTconsole", "OVRTTconsole.csproj", "{EE7130AD-8B7B-4089-8233-EC7DF1F6CA77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE7130AD-8B7B-4089-8233-EC7DF1F6CA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7130AD-8B7B-4089-8233-EC7DF1F6CA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7130AD-8B7B-4089-8233-EC7DF1F6CA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7130AD-8B7B-4089-8233-EC7DF1F6CA77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC7718D0-A037-4F39-A83B-5BA1DA71FFFC}
+	EndGlobalSection
+EndGlobal
