@@ -1,5 +1,4 @@
 # OVRTT - Open VR Toe Tracker
----
 
  ## What is OVRTT?
 OVRTT is a DIY solution for a simple toe tracker that can be used in VR.
