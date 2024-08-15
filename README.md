@@ -18,7 +18,7 @@ And lastly, you will have to modify your avatar and add some blendtrees so your 
 
 ### Quick demo video
 
-https://github.com/user-attachments/assets/2ac1dabc-94af-47d9-994c-e1669218554c
+https://github.com/user-attachments/assets/d189bf97-c6d0-47d8-8f5b-3956b5103565
 
 
 ---
