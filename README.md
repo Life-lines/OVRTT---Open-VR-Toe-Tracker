@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/d189bf97-c6d0-47d8-8f5b-3956b5103565
 
 ### Showcase pictures
 
-![Showcase 1](Images/showcase2.JPG)
+![Showcase 1](Images/showcase1.JPG)
 
 ![Showcase 2](Images/showcase2.JPG)
 
