@@ -18,6 +18,15 @@ And lastly, you will have to modify your avatar and add some blendtrees so your 
 
 ### Quick demo video
 
+https://github.com/user-attachments/assets/d189bf97-c6d0-47d8-8f5b-3956b5103565
+
+
+### Showcase pictures
+
+![Showcase 1](Images/showcase2.JPG)
+
+![Showcase 2](Images/showcase2.JPG)
+
 ---
 #### Contents:
 0. [IMPORTANT THINGS!](#IMPORTANT-READ-THIS-BEFORE-CONTINUING)
