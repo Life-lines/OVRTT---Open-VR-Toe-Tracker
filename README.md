@@ -155,6 +155,9 @@ If you view the .stl files for the print models, for some reason the GitHub 3D p
 
 ---
 ## Soldering and assembly
+
+I recommend you check out the [Images](Images/) folder in this project for more photos from multiple angles at various stages of assembly. These should serve as a reference for how the parts are supposed to fit.
+
 ### Prior to any assembly or soldering:
 - Before you start with the actual assembly, you should make sure all the parts fit in their intended place inside the box, and that the box cover fits on top nicely when all the parts are inside. If any part doesn't fit, use the Exacto knife or similar sharp tool to scrape at the surfaces/edges that did not get printed nicely or cut away any excess plastic that does not allow for a snug fit. All 3d printers work under some tolerances and manual corrections will almost always be required in these 4 key areas:
   1. Battery compartment: on the side of the box where the battery is supposed to fit, there are 2 purposefully printed protrusions. These are meant to be cut to size after printing (not all PP3 batteries have exactly equal dimensions). The battery should fit snugly, without the side wall being pressed out. If you over-cut and the fit is too loose, you can wrap the battery in a few layers of teflon tape until the fit is snug or add some hot glue as padding to the box (but avoid putting hot glue near the battery until the hot glue cools down, do not expose the battery to excess heat!). ![Battery compartment](Images/battery_compartment.jpg)
