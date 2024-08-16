@@ -43,21 +43,9 @@ https://github.com/user-attachments/assets/d189bf97-c6d0-47d8-8f5b-3956b5103565
 Great, the full part list and how to assemble guide is provided below. 
 
 ## IMPORTANT, READ THIS BEFORE CONTINUING:
-The OVRTTconsole application uses 32feet/InTheHand library to connect to BLE devices. I was unable to get the library to work with newer versions of .NET, and have had to rely on .NET 7.0 to get the library to work. As of May 2024, Microsoft is no longer supporting .NET 7.0, which means no more security updates for this version of the runtime. If you already have .NET 7.0.20 (latest 7.0 version) installed, the OVRTTconsole should work without issue. If you do not have .NET 7.0.20, you may download it from the official Microsoft website. If you do not want to install .NET 7.0, your final option is to adapt the existing source code of the OVRTTconsole so that it works on newer .NET versions. (Or create your own application that can read BLE data and send it through OSC, that does not rely on .NET runtimes.)
+The OVRTTconsole application uses 32feet/InTheHand library to connect to BLE devices. I was unable to get the library to work with newer versions of .NET, and have had to rely on .NET 7.0 to get the library to work. As of May 2024, Microsoft is no longer supporting .NET 7.0, which means no more security updates for this version of the runtime. 
 
-If you do not have .NET 7.0 installed and run the OVRTTconsole.exe file, a prompt should show up saying you need .NET 7.0 installed to run the file. The prompt may redirect you to a website where you can download the necessary files. I believe this prompt is a built in Windows feature, however I would still encourage users to download the .NET 7.0 Desktop Runtime from the Microsoft website themselves, rather than following the prompt. 
-
-## __In any case, make absolutely sure you download .NET runtimes ONLY from the official Microsoft website!__
-
-If you do not know what versions of .NET Runtime you have installed, you can use this line in the command prompt:
-
-`dotnet --list-runtimes`
-
-![.NET runtimes](Images/dotNET_list.png)
-
-In the list there should be "Microsoft.NETCore.App 7.0.XX" where XX is ideally equal to 20. If you have an older version, say "Microsoft.NETCore.App 7.0.19" it might be smart to upgrade to 7.0.20 for security reasons, but the OVRTTconsole will probably still work with older versions, however I have not explicitly tested the application on older versions.
-
-If however you receive an error saying something like `'dotnet' is not recognized as a command` you will have to figure out whether you have a misconfigured .NET installation (likely missing in PATH system environment variable) or you might not have any .NET runtimes installed at all.
+The OVRTTconsole executable in the releases is published with all the necessary requirement inside the .exe file (hence it's large size, considering the actual program is rather simple). If that is not to your liking, you're welcome to build your own version with the provided source code and Visual Studio project files. (I mean, 88MB for a simple console program that has less than 1000 lines of code and no visuals/graphics? Really?)
 
 ### ALSO IMPORTANT:
 When you first run the OVRTTconsole.exe application, you might also receive a prompt asking whether you want to allow the application to access home/private and/or public networks. Since OSC is a network protocol, you will likely need to allow the application to use home/private networks, otherwise you may encounter issues when sending data to VRChat via OSC. The OVRTTconsole application does not need access to public networks. These settings can always be changed in the Windows Firewall configuration.
