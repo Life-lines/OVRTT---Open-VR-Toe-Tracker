@@ -97,7 +97,7 @@ I also recommend reading this guide in it's entirety before doing any work on th
 <br>
 
 - Teflon thread sealing tape - one roll (\~$1 per roll)
-- Rubber bands - 60mm in circumference, or see notes - at least two pieces (\~$1 for a pack of mixed sizes with total 200 pieces)
+- Elastic bands - 60mm in circumference, or see notes - at least two pieces (\~$1 for a pack of mixed sizes with total 200 pieces)
 - String - at least 30cm/11 inches in length - see notes (\~$1)
 
 <br>
@@ -277,15 +277,15 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 <br>
 
-- Get a rubber band and loop wrap it around the central pillar, so that the leftover end is pointing towards the 20mm m2 screw
+- Get an elastic band and loop wrap it around the central pillar, so that the leftover end is pointing towards the 20mm m2 screw
 - Loop the band around the screw and onto the attachment on the sensor slider 
     - ![Elastic loop around 20mm M2 screw](Images/elastic_loop_screw.jpg)
 
-- __ALTERNATIVE:__ Nook for different length rubber band - use the nook to attach a zip-tie or similar item with an elastic band, that you will then wrap around the 20mm M2 screw and onto the sensor slider.
+- __ALTERNATIVE:__ Nook for different length elastic band - use the nook to attach a zip-tie or similar item with an elastic band, that you will then wrap around the 20mm M2 screw and onto the sensor slider.
 
 <br>
 
-- Pull on the string to test how much force is needed to move the slider, especially when the rubber band is fully extended
+- Pull on the string to test how much force is needed to move the slider, especially when the elastic band is fully extended
 - The elastic band should be able to provide enough elasticity so that the slider is always under some amount of tension
 
 <br>
