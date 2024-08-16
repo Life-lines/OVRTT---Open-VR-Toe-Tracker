@@ -552,7 +552,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 ### Bluetooth issues in general
 
 - I've done some limited amount of testing with the OVRTT trackers, here are my general findings:
-  * Use a separate USB Bluetooth dongle that has BLE capabilities, rather than the one built in on your motherboard, I use the TP-LINK UB500 (make absolutely sure that Windows is using the dongle, for that you might have to disable the motherboard USB device in the Windows Device manager)
+  * Use a separate USB Bluetooth dongle that has BLE capabilities, rather than the one built in on your motherboard, I use the TP-LINK UB500 (make absolutely sure that Windows is using the dongle, for that you might have to disable the motherboard Bluetooth device in the Windows Device manager)
   * Get a USB extension cable and attach the Bluetooth dongle in such a way, that it is always within 9 feet of you, as you move around. It is better if it's closer to the floor/wherever your feet will be.
   * I am using the full Index kit with 3 Vive 3.0 trackers and lose connection to the OVRTT trackers quite often if I'm more than 10 feet away. I can only imagine this gets worse with even more Vive trackers/other Bluetooth devices others might use.
 
