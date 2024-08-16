@@ -580,6 +580,8 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 ### OVRTTconsole issues
 - I honestly don't know what to type here. The console is pretty much built to work if everything is correctly set up, otherwise it shuts down. Sometimes error messages are included, but I don't think I've covered every possible thing that can go wrong with an error message. You can enable the `debug_out` option in the config file by setting it to `true` to see if you can gleam any relevant information from the additional DEBUG information.
 
+- If the console does not start after you run it, or it appears that it instantly closes, you have to make sure you have the proper runtimes installed. If you're sure you have the right versions but the console application still doesn't start as it should, your best bet is to download the latest version of the Microsoft Visual Studio and import the project source code. Visual Studio should automatically detect any missing dependencies and guide you through the installation. You can then run console through the Visual Studio debugger, to make sure it runs. After a successful build with Visual Studio debugger, you can then publish the project locally on your PC to get the executable from which you'll run the console.
+
 ---
 
 ## Miscellaneous 
