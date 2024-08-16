@@ -151,6 +151,8 @@ I have to be honest, I didn't 3D print these myself. I know next to nothing abou
 
 They slightly differ from the design of the 3D models provided in this project, as I learned a few things when assembling my trackers. Hopefully the really bad parts are sufficiently dealt with in the newly designed models that are provided here. In any case, most things can be corrected even after the parts are printed, you just have to go about it in a smart way. This is where the Exacto knife and the glue will come in handy.
 
+If you view the .stl files for the print models, for some reason the GitHub 3D preview messes up the LEFT model pieces. I don't know why. Before you print these files, you should throw them in your slicing software and make sure all the layers are good. If there are mistakes in the .stl files that I missed, they should be easily correctable in Blender, but you can also drop a comment in the project issues section and I will take a look.
+
 ---
 ## Soldering and assembly
 ### Prior to any assembly or soldering:
