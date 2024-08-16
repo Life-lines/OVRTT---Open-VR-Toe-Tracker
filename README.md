@@ -132,13 +132,9 @@ I also recommend reading this guide in it's entirety before doing any work on th
 
 - There are cheaper imitations/knock-offs of the [Arduino Nano 33 BLE Rev2](https://store.arduino.cc/en-si/products/nano-33-ble-rev2) board out there. Prices vary from ~$7 and up. You might be able to save quite a few dollars by going for one of these instead of the original Arduino board. But be wary of fake and/or similar products that do not offer the same functionality. The board must act as the original Arduino board, must have BLE functionality, and must be compatible with the original Arduino scripts/Arduino IDE, otherwise you will have to adapt the scripts yourself.
 
-- [Alps Alpine RDC1047A03](https://tech.alpsalpine.com/e/products/detail/RDC1047A03/#ancFig1) linear sensor was chosen specifically because it has a very low force requirement to move the slider. Initially I tried to use more common and cheaper linear potentiometers, but they were all too stiff to move and would require an elastic way too strong to keep under constant tension, and so it would very quickly become uncomfortable to wear. Another thing to note with the RDC1047A03 sensor is that it is not symmetric (like regular potentiometers often are). The sensor will only fit into the box one way, with the larger "edge" pointing toward the 20mm m2 screw. The "dock" that the sensor is supposed to fit into has slight gaps which are supposed to make wire management easier. You can opt to chose a cheaper, more common potentiometer, but a redesign of the box will be required to fit such a part. 
+- [Alps Alpine RDC1047A03](https://tech.alpsalpine.com/e/products/detail/RDC1047A03/#ancFig1) linear sensor was chosen specifically because it has a very low force requirement to move the slider. Initially I tried to use more common and cheaper linear potentiometers, but they were all too stiff to move and would require an elastic way too strong to keep under constant tension, and so it would very quickly become uncomfortable to wear. Another thing to note with the RDC1047A03 sensor is that it is not symmetric (like regular potentiometers often are). The sensor will only fit into the box one way, with the larger "edge" pointing toward the 20mm m2 screw. The "dock" that the sensor is supposed to fit into has slight gaps which are supposed to make wire management easier. You can opt to chose a cheaper, more common potentiometer, but a redesign of the box will be required to fit such a part. ![Sensor position](Images/wires_below_sensor_2.JPG)
 
-- ![Sensor position](Images/wires_below_sensor_2.JPG)
-
-- [CUI Devices SLW-121586-5A-D](https://www.cuidevices.com/product/switches/slide-switches/slw-121586-5a-d#specifications) slide switch is a recommended part, because the 3D print designs are made to fit. You can use a different switch (or no switch at all), but if you do, you will likely need to change the 3D models to fit this new switch. The SLW-121586-5A-D slide switch was chosen because it's cheap, and has a decent sized switch lever height of 5mm, which makes it possible to attach a "slider" that blocks the battery charging port when the tracker is turned on, as the EVHR22-550C battery model is not supposed to be recharged while in use. 
-
-- ![Switch with front slider](Images/front_slider_1.jpg)
+- [CUI Devices SLW-121586-5A-D](https://www.cuidevices.com/product/switches/slide-switches/slw-121586-5a-d#specifications) slide switch is a recommended part, because the 3D print designs are made to fit. You can use a different switch (or no switch at all), but if you do, you will likely need to change the 3D models to fit this new switch. The SLW-121586-5A-D slide switch was chosen because it's cheap, and has a decent sized switch lever height of 5mm, which makes it possible to attach a "slider" that blocks the battery charging port when the tracker is turned on, as the EVHR22-550C battery model is not supposed to be recharged while in use. ![Switch with front slider](Images/front_slider_1.jpg)
 
 - The 9V battery [EverActive EVHR22-550C](https://everactive.eu/sites_collections/product/788) (link is for the non-C model, the official website does not list it for some reason) was chosen because it has a USB-C recharging port at the bottom. This enables the use of a "slider" that blocks the port when the tracker is turned on. Many 9V rechargeable batteries come in similar designs, but be wary. There is a lot of misinformation listed (on say Amazon) when looking through the different products if one searched for "9V rechargeable usb-c". Look through the reviews and see what they say. Any battery that boasts 1000+mAh capacity likely has a mistake with it's listing, and the "mAh" should instead say "mWh", meaning the battery has an actual capacity of only about 500mAh. A lot of these batteries come with Micro-USB ports as well, but I've read that these ports can have more issues with longevity than USB-C ports. The output voltage of these batteries may not always be 9V, (the EVHR22-550C only outputs 7.4V) but that does not matter, since the Arduino Nano 33 BLE Rev2 only needs a 4.5V input. The MP2322GQH buck converter on the board can accept a max 21V 1A input, so as long as your chosen battery can provide a min 4.5V input at max 22mA continuously for 8h+, you should be good. Again, you should pick a safe battery, and treat it with care. Do NOT damage or use a damaged lithium battery, do NOT expose it to heat, follow the instructions regarding the charging.
   - A point on battery life - the EVHR22-550C are advertised as max 550mAh capacity batteries. They should easily last 8h+ of continuous use with the tracker, however it is difficult to know how much current the Arduino board actually uses without a specific measuring device (which I do not have). There is also the additional factor of power loss through conversion, as the battery outputs a 7.4V voltage, which gets converted down to 3.3V with the MP2322GQH buck converter on the Arduino board. However, in the provided Arduino scripts, a few power saving options are enabled, but the code could be even more optimized for more efficient power consumption, should one desire to do so.
@@ -171,7 +167,7 @@ They slightly differ from the design of the 3D models provided in this project, 
 
 - Make sure the 20mm m2 screw can fit into the hole on the side of the box and that you have enough room to tighten a nut on it -picture-
 
-- It may prove to be useful to upload the sketches to the Arduino boards at this stage, prior to soldering the components. You will need to install the Arduino IDE from the official Arduino website, plug in your Arduino Nano board and install any necessary libraries in order for the Arduino IDE to work with the provided sketches and the board. There are many youtube videos on how to do this, I feel like I don't have to bother with a specific segment in the guide for this process.
+- It may prove to be useful to upload the sketches to the Arduino boards at this stage, prior to soldering the components. You will need to install the Arduino IDE from the official Arduino website, plug in your Arduino Nano board and install any necessary libraries in order for the Arduino IDE to work with the provided sketches and the board. There are many youtube videos on how to do this, the process is pretty straight forward.
 
 - Not needed but may be useful: you may also cut a hole into the box wall where the Arduino Nano USB plug is, for easy access to the board if you plan on updating the scripts (perhaps for other uses) on the board. Scripts on the Arduino Nano can only be updated via the USB connection. -picture-
 
@@ -180,6 +176,8 @@ They slightly differ from the design of the 3D models provided in this project, 
 
 ## IMPORTANT:
 Soldering can be a dangerous activity, use proper protective gear, and only do this if you know how to __safely__! You can use the soldering iron to heat press the threaded inserts into the plastic, if you have the proper bits that fit the right size thread onto your soldering iron.
+
+Also check the [Images](Images) folder of this project. You will find more pictures from multiple angles of the trackers with all the components inside, they can serve as good reference when building/soldering the device.
 
 ---
 
@@ -200,19 +198,21 @@ See this picture for a professionally constructed pin plan in paint! -picture-
 <br>
 
 - Starting with the 9V battery clip-on, solder the wire that attaches to the positive side of the battery to the middle pin of the SLW-121586-5A-D slide switch.
-- Solder the wire that attaches from the negative side of the battery clip on to one of the `GND` pins on the Arduino Nano broad.
+- Solder the wire that attaches from the negative side of the battery clip-on to one of the `GND` pins on the Arduino Nano broad.
 - Solder one of the side pins on the SLW-121586-5A-D switch to the `VIN` pin on the Arduino board using a wire, it doesn't matter which, unless you've prepared very short wires. In that case, and if you've decided to use the "front slider" to cover the battery recharging port, you will solder this wire to the side that is closest to the battery, when the switch is fitted inside the box. -picture- On the second tracker, you will have to do the same, but on the opposite side, since the boxes are mirrored as far as the switch and battery positions go.
 
 <br>
 
-At this point the SLW-121586-5A-D switch should be soldered to the battery clip-on and the Arduino board. What is left is to solder the RDC1047A03 linear sensor to the Arduino board. If you have already uploaded the sketch to the Arduino board, you can test the solder by attaching the battery to the clip-on and flipping the switch! If a green light briefly turns on, then a blue one blinks about every 5 seconds, you're all good!
+At this point the SLW-121586-5A-D switch should be soldered to the battery clip-on and the Arduino board. What is left is to solder the RDC1047A03 linear sensor to the Arduino board. If you have already uploaded the sketch to the Arduino board, you can test the solder by attaching the battery to the clip-on and flipping the switch! If a green light briefly turns on, then a blue one blinks about every 5 seconds, you're all good! 
+
+Remove the battery from the clip-on before soldering the linear sensor.
 
 <br>
 
 - Solder the washer pin (pin that is opposite of the plate with the 3 holes) on the RDC1047A03 linear sensor to the `A4` pin on the Arduino board with a wire
 - Solder the middle pin on the RDC1047A03 linear sensor to one of the `GND` pins on the Arduino board
 - Solder the last pin on the RDC1047A03 linear sensor to the `3V3` pin on the Arduino board 
-- __NOTICE__: the washer pin may __ONLY__ be soldered to one of the analogue pins on the board - `A0` to `A7`. If the other two pins of the linear sensor are soldered as described above (middle to `GND` pin) the raw curl value will be at 0, and the raw bend value will be at 1023. You may switch these two connections (middle to `3V3` pin) but then you will also have to edit the OVRTTconsole config file and swap the "curl" and "bend" values from the default configuration.
+- __NOTICE__: the washer pin may __ONLY__ be soldered to one of the analogue pins on the board - `A0` to `A7` - the default Ardino sketches are set to read from the `A4` pin. If the other two pins of the linear sensor are soldered as described above (middle to `GND` pin) the raw curl value will be at 0, and the raw bend value will be at 1023. You may switch these two connections (middle to `3V3` pin) but then you will also have to edit the OVRTTconsole config file and swap the "curl" and "bend" values from the default configuration.
 
 Repeat steps above for the other tracker.
 
