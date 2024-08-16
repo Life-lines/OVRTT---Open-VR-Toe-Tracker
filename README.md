@@ -354,7 +354,7 @@ In a perfect scenario, each time you put on the tracker, the reference values fo
 - fully curled toes = 0
 - fully bent toes = 1023
 - default flat toes = 511
-- 
+
 where would equal to the 'x' position of the potentiometer, as one might expect;
 
 |x--------------------------| - for curled toes
