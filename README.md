@@ -177,9 +177,9 @@ Also check the [Images](Images) folder of this project. You will find more pictu
 ---
 
 ### Prior to soldering:
-- Heat press the M2 insert in the middle of the "bar" in the 3d printed box - picture
-- Heat press the 1/4" insert in the bottom of the 3d printed "central pillar" - picture
-- Dismantle the UTP cable to obtain the small singular wires within, you need 4 per tracker, approximately 7.5cm/3" in length, you can also strip the ends of the protective shell. -picture- The length of the wires can be much smaller, but you will need to carefully plan out how all the electrical components fit inside the box
+- Heat press the M2 insert in the middle of the "bar" in the 3d printed box ![M2 insert heat press](Images/heat_press_m2_thread.jpg)
+- Heat press the 1/4" insert in the bottom of the 3d printed "central pillar" ![1/4" insert heat press](Images/heat_press_14_thread.jpg)
+- Dismantle the UTP cable to obtain the small singular wires within, you need 4 per tracker, approximately 7.5cm/3" in length, you can also strip the ends of the protective shell. The length of the wires can be much smaller, but you will need to carefully plan out how all the electrical components fit inside the box
 - Glue the sensor attachment to the sensor slider, if you haven't yet, this can be done later, once the sensor has been soldered and screwed in to the box, but it will be easier at this stage. Make sure the attachment can fit on to the sensor, then I recommend you put two drops of the instant glue into the hole of the attachment then turn the sensor upside down and press the attachment onto the plastic slider. This way any excess glue will not drop into the rails of the slider.
 
 ### Soldering:
@@ -220,14 +220,14 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 ---
 
 ### Assembly:
-- Put the 20mm M2 screw into the hole on the side of the box and tighten it with a nut. You can secure this nut with a little bit of thread locking fluid, if you have it. Wrap teflon tape around the protruding part of the screw, then add another M2 nut on the top of screw, which you can also secure with some thread locking fluid (but don't make a mess) -picture-
+- Put the 20mm M2 screw into the hole on the side of the box and tighten it with a nut. You can secure this nut with a little bit of thread locking fluid, if you have it. Wrap teflon tape around the protruding part of the screw, then add another M2 nut on the top of screw, which you can also secure with some thread locking fluid (but don't make a mess) ![20mm M2 screw](Images/20mm_m2_screw.jpg)
 
 - Remove the battery from the clip-on, it will make things a little easier
 - Attach the "front slider" to the SLW-121586-5A-D switch, if you want to use it
-- All the wires that are attached to the Arduino board should ideally run on the back of the board to the bottom of the box -picture- and underneath the linear sensor
+- All the wires that are attached to the Arduino board should ideally run on the back of the board to the bottom of the box and underneath the linear sensor
 
 - Before screwing in or hot gluing in any of the components, place the slider switch, the linear sensor, and the Arduino board into the box, so that all the wires, other than the ones connected to the 9V battery clip-on run underneath the sensor and behind the board
-- There should be no wires hanging above the sensor slider! -picture-
+- There should be no wires hanging above the sensor slider! ![Wires going below sensor](Images/wires_below_sensor.jpg)
 
 <br>
 
@@ -235,7 +235,7 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 <br>
 
-- Make sure the SLW-121586-5A-D switch flips "ON" in the right direction - if you are going to use the "front slider" to block the battery charging port, it should flip "ON" towards the battery! -video clip-
+- Make sure the SLW-121586-5A-D switch flips "ON" in the right direction - if you are going to use the "front slider" to block the battery charging port, it should flip "ON" towards the battery!
 
 <br>
 
@@ -246,9 +246,9 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 <br>
 
 - Get a foot strap (make sure you use the proper left/right side strap with the correct side tracker) and unscrew the Vive tracker if you haven't already
-- Get the 3D printed central pillar and insert the 1/4' screw in the top compartment if you haven't already -picture-
+- Get the 3D printed central pillar and insert the 1/4' screw in the top compartment if you haven't already ![Central pillar with 1/4" screw](Images/central_pillar_w_screw.jpg)
 
-- Place the box on the strap so that the screw from the strap is looking through the central hole, then screw on the central pillar so tightly that the box doesn't move around. The opening opposite of the protruding 20mm M2 screw should point directly at your toes. Exactly which toe is up to you, but I recommend the second "pointer" toe.  -picture-
+- Place the box on the strap so that the screw from the strap is looking through the central hole, then screw on the central pillar so tightly that the box doesn't move around. The opening opposite of the protruding 20mm M2 screw should point directly at your toes. Exactly which toe is up to you, but I recommend the second "pointer" toe.  ![Slider pointing at toes](Images/slider_pointing_toes.jpg)
 
 <br>
 
@@ -263,7 +263,7 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 <br>
 
 - Get a rubber band and loop wrap it around the central pillar, so that the leftover end is pointing towards the 20mm m2 screw
-- Loop the band around the screw and onto the attachment on the sensor slider -picture-
+- Loop the band around the screw and onto the attachment on the sensor slider ![Elastic loop around 20mm M2 screw](Images/elastic_loop_screw.jpg)
 
 - __ALTERNATIVE:__ Nook for different length rubber band - use the nook to attach a zip-tie or similar item with an elastic band, that you will then wrap around the 20mm M2 screw and onto the sensor slider.
 
@@ -274,7 +274,7 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 <br>
 
-- Also consider the fact that the "neutral" position of the toes in a "flat" position is supposed to equate to the slider being somewhere in the middle of the sensor -pictures-
+- Also consider the fact that the "neutral" position of the toes in a "flat" position is supposed to equate to the slider being somewhere in the middle of the sensor
 
 <br>
 
@@ -283,7 +283,7 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 <br>
 
-- Here is a short video clip representing the intended range of motion and can help you visualize how to measure the correct length of the string -video clip-
+- Refer to the demo clip at the top, it features the intended range of motion and can help you visualize how to measure the correct length of the string
 
 ---
 
