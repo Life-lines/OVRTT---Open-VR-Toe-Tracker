@@ -123,10 +123,10 @@ I also recommend reading this guide in it's entirety before doing any work on th
 - USB Micro-B cable is needed to connect to the Arduino board. The original Arduino Nano 33 BLE Rev2 can only be connected to a PC with a Micro-B cable capable of data transfer (many such cables are only capable of charging). If you buy a cheaper non-Arduino imitation of the borad, it might come with a different connector, so make sure you have that type instead. For testing purposes, it might be handy to have two such cables, since the OVRTTconsole will work only if it can connect to both devices.
 
 - [Alps Alpine RDC1047A03](https://tech.alpsalpine.com/e/products/detail/RDC1047A03/#ancFig1) linear sensor was chosen specifically because it has a very low force requirement to move the slider. Initially I tried to use more common and cheaper linear potentiometers, but they were all too stiff to move and would require an elastic way too strong to keep under constant tension, and so it would very quickly become uncomfortable to wear. Another thing to note with the RDC1047A03 sensor is that it is not symmetric (like regular potentiometers often are). The sensor will only fit into the box one way, with the larger "edge" pointing toward the 20mm m2 screw. The "dock" that the sensor is supposed to fit into has slight gaps which are supposed to make wire management easier. You can opt to chose a cheaper, more common potentiometer, but a redesign of the box will be required to fit such a part. 
-  - ![Sensor position](Images/wires_below_sensor_2.JPG)
+    - ![Sensor position](Images/wires_below_sensor_2.JPG)
 
 - [CUI Devices SLW-121586-5A-D](https://www.cuidevices.com/product/switches/slide-switches/slw-121586-5a-d#specifications) slide switch is a recommended part, because the 3D print designs are made to fit. You can use a different switch (or no switch at all), but if you do, you will likely need to change the 3D models to fit this new switch. The SLW-121586-5A-D slide switch was chosen because it's cheap, and has a decent sized switch lever height of 5mm, which makes it possible to attach a "slider" that blocks the battery charging port when the tracker is turned on, as the EVHR22-550C battery model is not supposed to be recharged while in use.
-  - ![Switch with front slider](Images/front_slider_1.jpg)
+    - ![Switch with front slider](Images/front_slider_1.jpg)
 
 - The 9V battery [EverActive EVHR22-550C](https://everactive.eu/sites_collections/product/788) (link is for the non-C model, the official website does not list it for some reason) was chosen because it has a USB-C recharging port at the bottom. This enables the use of a "slider" that blocks the port when the tracker is turned on. Many 9V rechargeable batteries come in similar designs, but be wary. There is a lot of misinformation listed (on say Amazon) when looking through the different products if one searched for "9V rechargeable usb-c". Look through the reviews and see what they say. Any battery that boasts 1000+mAh capacity likely has a mistake with it's listing, and the "mAh" should instead say "mWh", meaning the battery has an actual capacity of only about 500mAh. A lot of these batteries come with Micro-USB ports as well, but I've read that these ports can have more issues with longevity than USB-C ports. The output voltage of these batteries may not always be 9V, (the EVHR22-550C only outputs 7.4V) but that does not matter, since the Arduino Nano 33 BLE Rev2 only needs a 4.5V input. The MP2322GQH buck converter on the board can accept a max 21V 1A input, so as long as your chosen battery can provide a min 4.5V input at max 22mA continuously for 8h+, you should be good. Again, you should pick a safe battery, and treat it with care. Do NOT damage or use a damaged lithium battery, do NOT expose it to heat, follow the instructions regarding the charging.
   - A point on battery life - the EVHR22-550C are advertised as max 550mAh capacity batteries. They should easily last 8h+ of continuous use with the tracker, however it is difficult to know how much current the Arduino board actually uses without a specific measuring device (which I do not have). There is also the additional factor of power loss through conversion, as the battery outputs a 7.4V voltage, which gets converted down to 3.3V with the MP2322GQH buck converter on the Arduino board. However, in the provided Arduino scripts, a few power saving options are enabled, but the code could be even more optimized for more efficient power consumption, should one desire to do so.
@@ -153,9 +153,9 @@ I recommend you check out the [Images](Images/) folder in this project for more 
 ### Prior to any assembly or soldering:
 - Before you start with the actual assembly, you should make sure all the parts fit in their intended place inside the box, and that the box cover fits on top nicely when all the parts are inside. If any part doesn't fit, use the Exacto knife or similar sharp tool to scrape at the surfaces/edges that did not get printed nicely or cut away any excess plastic that does not allow for a snug fit. All 3d printers work under some tolerances and manual corrections will almost always be required in these 4 key areas:
   1. Battery compartment: on the side of the box where the battery is supposed to fit, there are 2 purposefully printed protrusions. These are meant to be cut to size after printing (not all PP3 batteries have exactly equal dimensions). The battery should fit snugly, without the side wall being pressed out. If you over-cut and the fit is too loose, you can wrap the battery in a few layers of teflon tape until the fit is snug or add some hot glue as padding to the box (but avoid putting hot glue near the battery until the hot glue cools down, do not expose the battery to excess heat!). 
-    - ![Battery compartment](Images/battery_compartment.jpg)
+      - ![Battery compartment](Images/battery_compartment.jpg)
   2. ON/OFF switch compartment: if you have decided to use the SLW-121586-5A-D model slide switch, the plastic may need some cutting or scraping so that the switch fits nicely. You will have to do this on the box and the box cover. Again, carefully use the Exacto knife to cut or scrape away on the sides where it doesn't fit. If you cut too much plastic, instead of wrapping the switch in layers of teflon tape, you may hot glue it in, but only do so after soldering the wires and attaching the "front slider" what will block the battery charging plug, if you have decided to use one.
-    - ![Swtich with "front slider"](Images/front_slider_2.jpg)
+      - ![Swtich with "front slider"](Images/front_slider_2.jpg)
   3. Arduino Nano holders: the little holders in the box and the box cover can be particularly difficult to print accurately. (Honestly this entire part of the box probably needs a smart redesign the most.) They are meant to hold the Arduino board in place securely while providing enough space behind the board and underneath it for the wires. It is very likely you will need to cut/scrape the sides of the niches to make enough space for the board to fit. You should take extra care when cutting the niches on the box cover since the holders can easily be broken off the plate, in this picture below you can see mine tore off and I had glue it back together (using instant glue for plastic, rather than the hot glue gun). ![Broken holder glued back](Images/arduino_holder_broken.jpg)
   4. 1/4" screw compartment in the central pillar: The compartment on the top of the pillar is meant to fit a 1/4" screw with a hexagon head. The height of the hexagon head should be about 4mm and the width from one hexagon side to an opposite side should equal to 11mm. If the hexagon head of the screw is smaller than that, you can wrap it in several layers of the teflon tape to make it fit snugly, and you can also hot glue it into the pillar itself (but be warned, hot glue it in only if you're absolutely sure all the parts fit together perfectly - slight movement of the screw might be needed to make the box cover fit snugly onto the box when all the components are inside). The screw should not be able to rotate when it's inside the pillar, otherwise you won't be able to screw on your Vive trackers.
 
@@ -182,9 +182,9 @@ Also check the [Images](Images) folder of this project. You will find more pictu
 
 ### Prior to soldering:
 - Heat press the M2 insert in the middle of the "bar" in the 3d printed box
-  - ![M2 insert heat press](Images/heat_press_m2_thread.jpg)
+    - ![M2 insert heat press](Images/heat_press_m2_thread.jpg)
 - Heat press the 1/4" insert in the bottom of the 3d printed "central pillar"
-  - ![1/4" insert heat press](Images/heat_press_14_thread.jpg)
+    - ![1/4" insert heat press](Images/heat_press_14_thread.jpg)
 - Dismantle the UTP cable to obtain the small singular wires within, you need 4 per tracker, approximately 7.5cm/3" in length, you can also strip the ends of the protective shell. The length of the wires can be much smaller, but you will need to carefully plan out how all the electrical components fit inside the box
 - Glue the sensor attachment to the sensor slider, if you haven't yet, this can be done later, once the sensor has been soldered and screwed in to the box, but it will be easier at this stage. Make sure the attachment can fit on to the sensor, then I recommend you put two drops of the instant glue into the hole of the attachment then turn the sensor upside down and press the attachment onto the plastic slider. This way any excess glue will not drop into the rails of the slider.
 
@@ -226,14 +226,16 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 ---
 
 ### Assembly:
-- Put the 20mm M2 screw into the hole on the side of the box and tighten it with a nut. You can secure this nut with a little bit of thread locking fluid, if you have it. Wrap teflon tape around the protruding part of the screw, then add another M2 nut on the top of screw, which you can also secure with some thread locking fluid (but don't make a mess) ![20mm M2 screw](Images/20mm_m2_screw.jpg)
+- Put the 20mm M2 screw into the hole on the side of the box and tighten it with a nut. You can secure this nut with a little bit of thread locking fluid, if you have it. Wrap teflon tape around the protruding part of the screw, then add another M2 nut on the top of screw, which you can also secure with some thread locking fluid (but don't make a mess) 
+    - ![20mm M2 screw](Images/20mm_m2_screw.jpg)
 
 - Remove the battery from the clip-on, it will make things a little easier
 - Attach the "front slider" to the SLW-121586-5A-D switch, if you want to use it
 - All the wires that are attached to the Arduino board should ideally run on the back of the board to the bottom of the box and underneath the linear sensor
 
 - Before screwing in or hot gluing in any of the components, place the slider switch, the linear sensor, and the Arduino board into the box, so that all the wires, other than the ones connected to the 9V battery clip-on run underneath the sensor and behind the board
-- There should be no wires hanging above the sensor slider! ![Wires going below sensor](Images/wires_below_sensor.jpg)
+- There should be no wires hanging above the sensor slider! 
+    - ![Wires going below sensor](Images/wires_below_sensor.jpg)
 
 <br>
 
@@ -252,9 +254,11 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 <br>
 
 - Get a foot strap (make sure you use the proper left/right side strap with the correct side tracker) and unscrew the Vive tracker if you haven't already
-- Get the 3D printed central pillar and insert the 1/4' screw in the top compartment if you haven't already ![Central pillar with 1/4" screw](Images/central_pillar_w_screw.jpg)
+- Get the 3D printed central pillar and insert the 1/4' screw in the top compartment if you haven't already 
+    - ![Central pillar with 1/4" screw](Images/central_pillar_w_screw.jpg)
 
-- Place the box on the strap so that the screw from the strap is looking through the central hole, then screw on the central pillar so tightly that the box doesn't move around. The opening opposite of the protruding 20mm M2 screw should point directly at your toes. Exactly which toe is up to you, but I recommend the second "pointer" toe.  ![Slider pointing at toes](Images/slider_pointing_toes.jpg)
+- Place the box on the strap so that the screw from the strap is looking through the central hole, then screw on the central pillar so tightly that the box doesn't move around. The opening opposite of the protruding 20mm M2 screw should point directly at your toes. Exactly which toe is up to you, but I recommend the second "pointer" toe.  
+    - ![Slider pointing at toes](Images/slider_pointing_toes.jpg)
 
 <br>
 
@@ -269,7 +273,8 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 <br>
 
 - Get a rubber band and loop wrap it around the central pillar, so that the leftover end is pointing towards the 20mm m2 screw
-- Loop the band around the screw and onto the attachment on the sensor slider ![Elastic loop around 20mm M2 screw](Images/elastic_loop_screw.jpg)
+- Loop the band around the screw and onto the attachment on the sensor slider 
+    - ![Elastic loop around 20mm M2 screw](Images/elastic_loop_screw.jpg)
 
 - __ALTERNATIVE:__ Nook for different length rubber band - use the nook to attach a zip-tie or similar item with an elastic band, that you will then wrap around the 20mm M2 screw and onto the sensor slider.
 
