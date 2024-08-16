@@ -57,7 +57,7 @@ If you do not know what versions of .NET Runtime you have installed, you can use
 
 In the list there should be "Microsoft.NETCore.App 7.0.XX" where XX is ideally equal to 20. If you have an older version, say "Microsoft.NETCore.App 7.0.19" it might be smart to upgrade to 7.0.20 for security reasons, but the OVRTTconsole will probably still work with older versions, however I have not explicitly tested the application on older versions.
 
-If however you receive an error saying something like `"dotnet" is not recognized as a command` you will have to figure out whether you have a misconfigured .NET installation (likely missing in PATH system variable) or you might not have any .NET runtimes installed at all.
+If however you receive an error saying something like `'dotnet' is not recognized as a command` you will have to figure out whether you have a misconfigured .NET installation (likely missing in PATH system environment variable) or you might not have any .NET runtimes installed at all.
 
 ### ALSO IMPORTANT:
 When you first run the OVRTTconsole.exe application, you might also receive a prompt asking whether you want to allow the application to access home/private and/or public networks. Since OSC is a network protocol, you will likely need to allow the application to use home/private networks, otherwise you may encounter issues when sending data to VRChat via OSC. The OVRTTconsole application does not need access to public networks. These settings can always be changed in the Windows Firewall configuration.
