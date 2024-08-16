@@ -477,7 +477,7 @@ If you have edited the config file while the console is running, the console nee
 
 <br>
 
-- `left_foot_param` and `right_foot_param` should equal to parameter names that you will add to your avatar's parameters - example: `left_foot_param=/avatar/parameters/LeftAllToes`; the `/avatar/parameters/NameOfParameter` format is specific to VRChat and you can read more about it in the [VRChat OSC documentation](https://docs.vrchat.com/docs/osc-avatar-parameters)
+- `left_foot_param` and `right_foot_param` should equal to OSC paths and parameter names that you will add to your avatar's parameters - example: `left_foot_param=/avatar/parameters/LeftAllToes`; the `/avatar/parameters/NameOfParameter` path format is specific to VRChat and you can read more about it in the [VRChat OSC documentation](https://docs.vrchat.com/docs/osc-avatar-parameters)
 
 ##### Data & calibration
 
