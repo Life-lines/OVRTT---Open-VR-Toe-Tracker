@@ -592,4 +592,6 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 
 - It was a fun ride, but I'd like to focus on a few other things now. Thanks for checking this thing out, and I wish you all the best, whether or not you decide to build this thing!
 
-- And lastly, I would like to thank everyone who has helped me create this fun little project. I love you all!
+- If more than 3 people actually end up building this, even if they don't use it much, I will consider this project a success. If more than 10 people build and use it, I will consider this project a viral success.
+
+- And finally, I would like to thank everyone who has helped me create this thing. There is no way I could get this far solo. I love you all!
