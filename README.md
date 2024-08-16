@@ -197,7 +197,9 @@ Also check the [Images](Images) folder of this project. You will find more pictu
 
 <br>
 
-See this picture for a professionally constructed pin plan in paint! -picture-
+See this picture for a professionally constructed pin plan in paint!
+
+![Pin plan](Images/expert_pin_plan.png)
 
 <br>
 
