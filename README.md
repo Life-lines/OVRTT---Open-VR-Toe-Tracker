@@ -610,6 +610,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 ---
 
 - As it stands right now, I don't feel much motivation to continue developing this project. As of this release, don't expect any updates, __unless a crucial security flaw is found!__ In that case, I might update the OVRTTconsole, but only to eliminate the security flaw. I will for sure update this README file if such an issue is found though, so that users can stay informed of any potential risks.
+  - Feedback however is still appreciated. Especially if you actually make this thing. Then, you are beyond awesome!
 
 - All that said, I would very much like to see this project continued, or perhaps even see a new project spawn from this general idea. This is why everything included in this project is open source.
   - A possible avenue of improvement would likely be in separating the linear sensor from the battery and the Arduino board. This would make the box that attaches to your foot much thinner, and possibly let you use a linear sensor for each toe. The Arduino board has 8 analogue inputs so attaching more sensors should not be that difficult. Food for thought.
