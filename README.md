@@ -570,6 +570,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 ## Troubleshooting
 
 - Make sure your batteries are charged...
+- Make sure all the values in the config.conf file are correct
 
 ### Bluetooth issues in general
 
@@ -583,7 +584,9 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 ### OSC issues
 - Make sure OSC is enabled in VRChat
 
-- Initially I've had issues sending test data directly to VRChat via the OVRTTconsole. I haven't been able to find the culprit, but using an OSC router seemed to fix that issue. I highly recommend using VRCOSC, even if you only use one device to send data, and no devices to receive OSC data. You can disable all other functionality of VRCOSC and only use the OSC router. I believe there are other OSC routers out there, but I haven't used anything other than VRCOSC.
+- Make sure the port and IP are properly set in the config file
+
+- Initially I've had issues sending test data directly to VRChat via the OVRTTconsole. I haven't been able to find the culprit, but using an OSC router seemed to fix that issue. I highly recommend using [VRCOSC](https://github.com/VolcanicArts/VRCOSC), even if you only use one device to send data, and no devices to receive OSC data. You can disable all other functionality of VRCOSC and only use the OSC router. I believe there are other OSC routers out there, but I haven't used anything other than VRCOSC.
 
 - Using the VRChat in-game OSC debugger can be quite helpful at troubleshooting your issues. If the OVRTT console is running as expected, you should be able to see the two parameters being sent to the game via the OVRTTconsole. If your trackers are working as expected and the configuration of the OVRTTconsole is correct, you should see the values change in real time in the VRChat OSC debugger.
 
