@@ -17,10 +17,15 @@ And lastly, you will have to modify your avatar and add some blendtrees so your 
 
 ### Quick demo video
 
-https://github.com/user-attachments/assets/d189bf97-c6d0-47d8-8f5b-3956b5103565
 
-https://github.com/user-attachments/assets/0c526f5a-b804-45c8-8fca-af1301425ee7
-In the VRChat video, you can also see the "OSC debug" values shown in the top left corner (the two squares with values 0.0, 0.5 and 1.0), and how they correspond with the movement of the toes.
+
+https://github.com/user-attachments/assets/52168c52-b3f5-4122-8964-467893082e03
+
+
+In the VRChat video above, you can also see the "OSC debug" values shown in the top left corner (the two squares with values 0.0, 0.5 and 1.0), and how they correspond with the movement of the toes.
+
+
+https://github.com/user-attachments/assets/d189bf97-c6d0-47d8-8f5b-3956b5103565
 
 
 ### Showcase pictures
