@@ -22,8 +22,8 @@ void setup() {
   }
 
   // Set the local and device name for the BLE device
-  BLE.setLocalName("NanoBLE-LEFT");
-  BLE.setDeviceName("NanoBLE-LEFT");
+  BLE.setLocalName("NanoBLE-RIGHT");
+  BLE.setDeviceName("NanoBLE-RIGHT");
 
   // Add the service and characteristic  
   sensorService.addCharacteristic(sensorCharacteristic);
