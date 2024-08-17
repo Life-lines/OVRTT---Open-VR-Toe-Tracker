@@ -401,9 +401,9 @@ Lets say those values approximate to:
 when read from the tracker raw.
 
 Calibration will, in this case, 'shift' the midpoint (flat) value accordingly, and split the range in three parts; from min to close to midpoint, a small midpoint range, and from close to midpoint to max. Then it will map the raw values to a range from 0.00 to 1.00 accordingly:
-- raw values from 15 to about 674 get mapped to values from 0.0 to 0.49
+- raw values from 15 to about 674 get mapped to values from 0.0 to 0.49 (and any raw value lower than 15 will revert to 15)
 - raw values from about 675 to 685 get mapped to a value of 0.5 - the midpoint
-- and raw values from 686 to 950 get mapped to values from 0.51 to 1.00
+- and raw values from 686 to 950 get mapped to values from 0.51 to 1.00 (and any raw value higher than 950 will revert to 950)
 
 When calibrating, one should pay some attention to the values. Ensure the value of the curl/bend is close to the edge-most (0 or 1023) value, and that the midpoint falls in-between those values, ideally with a margin of more than 100 from either curl or bend.
 
