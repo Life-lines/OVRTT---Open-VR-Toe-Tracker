@@ -205,7 +205,7 @@ See this picture for a professionally constructed pin plan in paint!
 
 - Starting with the 9V battery clip-on, solder the wire that attaches to the positive side of the battery to the middle pin of the SLW-121586-5A-D slide switch.
 - Solder the wire that attaches from the negative side of the battery clip-on to one of the `GND` pins on the Arduino Nano broad.
-- Solder one of the side pins on the SLW-121586-5A-D switch to the `VIN` pin on the Arduino board using a wire, it doesn't matter which, unless you've prepared very short wires. In that case, and if you've decided to use the "front slider" to cover the battery recharging port, you will solder this wire to the side that is closest to the battery, when the switch is fitted inside the box. -picture- On the second tracker, you will have to do the same, but on the opposite side, since the boxes are mirrored as far as the switch and battery positions go.
+- Solder one of the side pins on the SLW-121586-5A-D switch to the `VIN` pin on the Arduino board using a wire, it doesn't matter which, unless you've prepared very short wires. In that case, and if you've decided to use the "front slider" to cover the battery recharging port, you will solder this wire to the side that is closest to the battery, when the switch is fitted inside the box. On the second tracker, you will have to do the same, but on the opposite side, since the boxes are mirrored as far as the switch and battery positions go.
 
 <br>
 
@@ -252,7 +252,7 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 <br>
 
-- If everything fits as it should, and the linear sensor slider has enough room to move the entire length of the rail, you can screw it in using the small 3mm M2 screw. You can also secure this screw with a little bit of thread locking fluid, if you have it. -short clip-
+- If everything fits as it should, and the linear sensor slider has enough room to move the entire length of the rail, you can screw it in using the small 3mm M2 screw. You can also secure this screw with a little bit of thread locking fluid, if you have it. 
 
 - Attach the battery to the clip-on and fit it into the box 
 
@@ -569,7 +569,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 
 - Initially I've had issues sending test data directly to VRChat via the OVRTTconsole. I haven't been able to find the culprit, but using an OSC router seemed to fix that issue. I highly recommend using VRCOSC, even if you only use one device to send data, and no devices to receive OSC data. You can disable all other functionality of VRCOSC and only use the OSC router. I believe there are other OSC routers out there, but I haven't used anything other than VRCOSC.
 
-- Using the VRChat in-game OSC debugger can be quite helpful at troubleshooting your issues. If the OVRTT console is running as expected, you should be able to see the two parameters being sent to the game via the OVRTTconsole. If your trackers are working as expected and the configuration of the OVRTTconsole is correct, you should see the values change in real time in the VRChat OSC debugger. -video clip-
+- Using the VRChat in-game OSC debugger can be quite helpful at troubleshooting your issues. If the OVRTT console is running as expected, you should be able to see the two parameters being sent to the game via the OVRTTconsole. If your trackers are working as expected and the configuration of the OVRTTconsole is correct, you should see the values change in real time in the VRChat OSC debugger.
 
 
 ### Avatar parameters
@@ -591,6 +591,8 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 ## Miscellaneous 
 
 - It might be smart to include smoothing over the OSC parameters, so that other people can see smooth movement of your toes. Here is one such project that looks like it provides all the necessary things - [OSCmooth](https://github.com/regzo2/OSCmooth)
+
+- If anything in this guide/project is confusing or doesn't seem to make sense, you should drop an issue in this repository and I will take a look. I wrote different parts of this guide at different times in overall development of the project so there's chances some errors slipped through, despite multiple checks.
 
 ---
 
