@@ -307,7 +307,12 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 <br>
 
-- Refer to the demo clip at the top, it features the intended range of motion and can help you visualize how to measure the correct length of the string
+- Refer to the "showcase movement" clip at the top, it features the intended range of motion and can help you visualize how to measure the correct length of the string
+
+- Once you have the correct length of string, think about how you want to attach it to your toe. I came up with super simple "socks", made from a bit of fabric and stapled together with a stapler.
+  - Pictures: [1](Images/string_1.jpg) [2](Images/string_2.jpg)
+  - IMHO the design in picture 1 works better than the one in picture 2.
+  - However I strongly encourage users to figure out their own way of connecting the string to the toes, as neither of the two pictured above work great.
 
 ---
 
