@@ -305,6 +305,8 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 ## Using the OVRTTconsole
 
+This is how the OVRTTconsole looks like:
+![OVRTTconsole](Images/ovrttconsole.png)
 
 ### General instructions:
 
