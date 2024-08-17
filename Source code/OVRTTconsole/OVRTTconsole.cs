@@ -15,7 +15,7 @@ internal class OVRTTconsole
     // OSC sender
     private static OscSender OSCsender = null;
 
-    // Ouput value control
+    // Output value control
     private static bool outputControl = false;
 
     // Config file
@@ -76,7 +76,7 @@ internal class OVRTTconsole
         {
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("The console is now sending data via OSC to the defined parameters.");
-            Console.WriteLine("You can press 'c' or spacebar to begin the calibration routine.");
+            Console.WriteLine("You can press 'c' or space-bar to begin the calibration routine.");
             Console.WriteLine("You can press 'o' to toggle output of read values - WARNING - very spammy!");
             Console.WriteLine("You can press 'e' to exit at any time.");
         }
@@ -120,42 +120,42 @@ internal class OVRTTconsole
                                 Console.WriteLine("------------------------------------------------------------------------");
                                 Console.WriteLine("You have entered the calibration routine!");
                                 Console.WriteLine("The OSC sender is paused until you finish calibration.");
-                                Console.WriteLine("Press 'c' or spacebar to calibrate your left foot curl.");
+                                Console.WriteLine("Press 'c' or space-bar to calibrate your left foot curl.");
                             }
                             break;
                         case 1:
                             {
-                                Console.WriteLine("Press 'c' or spacebar to calibrate your left foot flat.");
+                                Console.WriteLine("Press 'c' or space-bar to calibrate your left foot flat.");
                                 calibrationStep++;
                             }
                             break;
                         case 2:
                             {
-                                Console.WriteLine("Press 'c' or spacebar to calibrate your left foot bend.");
+                                Console.WriteLine("Press 'c' or space-bar to calibrate your left foot bend.");
                                 calibrationStep++;
                             }
                             break;
                         case 3:
                             {
-                                Console.WriteLine("Press 'c' or spacebar to calibrate your right foot curl.");
+                                Console.WriteLine("Press 'c' or space-bar to calibrate your right foot curl.");
                                 calibrationStep++;
                             }
                             break;
                         case 4:
                             {
-                                Console.WriteLine("Press 'c' or spacebar to calibrate your right foot flat.");
+                                Console.WriteLine("Press 'c' or space-bar to calibrate your right foot flat.");
                                 calibrationStep++;
                             }
                             break;
                         case 5:
                             {
-                                Console.WriteLine("Press 'c' or spacebar to calibrate your right foot bend.");
+                                Console.WriteLine("Press 'c' or space-bar to calibrate your right foot bend.");
                                 calibrationStep++;
                             }
                             break;
                         case 6:
                             {
-                                Console.WriteLine("Press 'c' or spacebar to finish calibration routine.");
+                                Console.WriteLine("Press 'c' or space-bar to finish calibration routine.");
                                 calibrationStep++;
                             }
                             break;
@@ -169,7 +169,7 @@ internal class OVRTTconsole
                                     Console.WriteLine($"left foot curl: {leftCurlCalibrated} - left foot flat: {leftFlatCalibrated} - left foot bend: {leftBendCalibrated}");
                                     Console.WriteLine($"right foot curl: {rightCurlCalibrated} - right foot flat: {rightFlatCalibrated} - right foot bend: {rightBendCalibrated}");
                                     Console.WriteLine("The OSC sender will now resume sending data.");
-                                    Console.WriteLine("You can restart the calibration routine by pressing 'c' or space bar.");
+                                    Console.WriteLine("You can restart the calibration routine by pressing 'c' or space-bar.");
                                     Console.WriteLine("------------------------------------------------------------------------");
 
                                 }
@@ -179,13 +179,13 @@ internal class OVRTTconsole
                                     Console.WriteLine("WARNING: Values are not calibrated!");
                                     Console.WriteLine("Calibration routine is now finished, however the calibrated values have not been saved.");
                                     Console.WriteLine("Instead, the default values are used, which you can compare with the values you calibrated below:");
-                                    Console.WriteLine($"Using; left foot curl: {leftFootCurl} - left foot flat: {leftFootFlat} - left foot bend: {leftFootBend}");
+                                    Console.WriteLine($"Using raw values; left foot curl: {leftFootCurl} - left foot flat: {leftFootFlat} - left foot bend: {leftFootBend}");
                                     Console.WriteLine($"Badly calibrated; left foot curl: {leftCurlCalibrated} - left foot flat: {leftFlatCalibrated} - left foot bend: {leftBendCalibrated}");
-                                    Console.WriteLine($"Using; right foot curl: {rightFootCurl} - right foot flat: {rightFootFlat} - right foot bend: {rightFootBend}");
+                                    Console.WriteLine($"Using raw values; right foot curl: {rightFootCurl} - right foot flat: {rightFootFlat} - right foot bend: {rightFootBend}");
                                     Console.WriteLine($"Badly calibrated; right foot curl: {rightCurlCalibrated} - right foot flat: {rightFlatCalibrated} - right foot bend: {rightBendCalibrated}");
-                                    Console.WriteLine("Make sure that the calibrated values follow this simple formula: curl < flat < bend (or vice versa)");
+                                    Console.WriteLine("Make sure that the calibrated values follow this formula: curl < flat < bend (or vice versa, same as the raw values)");
                                     Console.WriteLine("The OSC sender will now resume sending data.");
-                                    Console.WriteLine("You can restart the calibration routine by pressing 'c' or space bar.");
+                                    Console.WriteLine("You can restart the calibration routine by pressing 'c' or space-bar.");
                                     Console.WriteLine("------------------------------------------------------------------------");
 
                                     leftCurlCalibrated = leftFootCurl;
@@ -241,14 +241,28 @@ internal class OVRTTconsole
     private static bool CheckCalibratedValues()
     {
 
-        if ((leftBendCalibrated < leftFlatCalibrated && leftFlatCalibrated < leftCurlCalibrated)
-                    ||
-                (leftBendCalibrated > leftFlatCalibrated && leftFlatCalibrated > leftCurlCalibrated)
-            &&
-                (rightBendCalibrated < rightFlatCalibrated && rightFlatCalibrated < rightCurlCalibrated)
-                    ||
-                (rightBendCalibrated > rightFlatCalibrated && rightFlatCalibrated > rightCurlCalibrated))
+        // Check if calibrated values follow the formula (curl < flat < bend - or vice versa)
+        bool leftValueCheck =
+            ((leftBendCalibrated < leftFlatCalibrated) && (leftFlatCalibrated < leftCurlCalibrated)) ||
+            ((leftBendCalibrated > leftFlatCalibrated) && (leftFlatCalibrated > leftCurlCalibrated));
+
+        bool rightValueCheck =
+            ((rightBendCalibrated < rightFlatCalibrated) && (rightFlatCalibrated < rightCurlCalibrated)) ||
+            ((rightBendCalibrated > rightFlatCalibrated) && (rightFlatCalibrated > rightCurlCalibrated));
+
+
+        // Check if calibrated values conform to the expected raw inputs
+        bool leftRawValueCheck = 
+            ((leftCurlCalibrated < leftBendCalibrated) && (leftFootCurl < leftFootFlat)) ||
+            ((leftCurlCalibrated > leftBendCalibrated) && (leftFootCurl > leftFootFlat));
+
+        bool rightRawValueCheck =
+            ((rightCurlCalibrated < rightBendCalibrated) && (rightFootCurl < rightFootFlat)) ||
+            ((rightCurlCalibrated > rightBendCalibrated) && (rightFootCurl > rightFootFlat));
+
+        if ((leftValueCheck && rightValueCheck) && (leftRawValueCheck && rightRawValueCheck))
         {
+
             return true;
         }
         else
@@ -311,7 +325,7 @@ internal class OVRTTconsole
             }
             else if (debugOut)
             {
-                Console.WriteLine($"Found {discoveredDevice.Name} - {discoveredDevice.Id} device");
+                Console.WriteLine($"DEBUG: Found {discoveredDevice.Name} - {discoveredDevice.Id} device");
             }
         }
 
@@ -326,7 +340,7 @@ internal class OVRTTconsole
             // Console color fix part 2
             Console.ResetColor();
             Console.WriteLine();
-            
+
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Red;
 
@@ -376,7 +390,7 @@ internal class OVRTTconsole
 
             if (targetService != null)
             {
-                if (debugOut) Console.WriteLine("Connected to service");
+                if (debugOut) Console.WriteLine("DEBUG: Connected to service");
 
                 // Default characteristic value
                 ushort shortID = 0x2A56;
@@ -397,16 +411,16 @@ internal class OVRTTconsole
                 }
 
                 var targetCharacteristic = await targetService.GetCharacteristicAsync(BluetoothUuid.FromShortId(shortID));
-                if (debugOut) Console.WriteLine($"Charactaristic connected to {shortID:X4}");
+                if (debugOut) Console.WriteLine($"DEBUG: Characteristic connected to {shortID:X4}");
 
                 if (targetCharacteristic != null)
                 {
                     if (debugOut)
                     {
-                        Console.WriteLine("Reading value...");
+                        Console.WriteLine("DEBUG: Reading value...");
                         var targetValue = await targetCharacteristic.ReadValueAsync();
 
-                        Console.WriteLine($"Value is {BitConverter.ToInt32(targetValue, 0)}");
+                        Console.WriteLine($"DEBUG: Value is {BitConverter.ToInt32(targetValue, 0)}");
                     }
                     targetCharacteristic.CharacteristicValueChanged += (sender, args) => Characteristic_CharacteristicValueChanged(sender, args, device.Name);
                     await targetCharacteristic.StartNotificationsAsync();
