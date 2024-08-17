@@ -466,7 +466,7 @@ If you have edited the config file while the console is running, the console nee
 
 - __NOTICE:__ it is crucial that all the above values match the ones in the Arduino sketches, otherwise the OVRTTconsole will be unable to connect to the trackers
 
-- Here is a picture of the default setup, showing both Arduino sketches and the config file: -picutre-
+- Here is a picture of the default setup, showing both Arduino sketches and the config file: [Picture of sketches with config file](Images/sketch_and_config.png)
 
 ##### OSC settings
 
@@ -475,7 +475,7 @@ If you have edited the config file while the console is running, the console nee
 - `OSC_send_port` is the port that the OSC sender will send data through, it should equal to `9000` if OVRTTconsole is the only program that sends data to VRChat, however you should also read the recommendation below
 
 - __RECOMMENDATION:__ If you use more than one OSC input, and especially if you use multiple OSC outputs from VRChat, you should probably use some sort of OSC router. I use the OSC router that comes built in to [VRCOSC](https://github.com/VolcanicArts/VRCOSC);
-  * if you decide to use an OSC router, you will need to match the `OSC_send_port` value to whatever it is set to in the router software, my setup looks like this -picture of my VRCOSC + config file-
+  * if you decide to use an OSC router, you will need to match the `OSC_send_port` value to whatever it is set to in the router software, my setup looks like this: [Picutre of VRCOSC and config file](Images/config_and_vrcosc.png)
 
 <br>
 
