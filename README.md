@@ -19,6 +19,9 @@ And lastly, you will have to modify your avatar and add some blendtrees so your 
 
 https://github.com/user-attachments/assets/d189bf97-c6d0-47d8-8f5b-3956b5103565
 
+https://github.com/user-attachments/assets/0c526f5a-b804-45c8-8fca-af1301425ee7
+In the VRChat video, you can also see the "OSC debug" values shown in the top left corner (the two squares with values 0.0, 0.5 and 1.0), and how they correspond with the movement of the toes.
+
 
 ### Showcase pictures
 
@@ -583,6 +586,8 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 
 - You can read more about [VRChat's OSC documentation here](https://docs.vrchat.com/docs/osc-avatar-parameters)
 
+- If somewhere along the way, some part of your solution got mixed up, and the toes on your resulting avatar move in the opposite direction than expected, you can always swap the `left_foot_curl=0` and `left_foot_bend=1023` values to `left_foot_curl=1023` and `left_foot_bend=0` (and same for the right foot) in the config file to see if that fixes it. However I would still advise you take the extra time and try to figure out what got swapped where. It could save you a headache later if something else goes wrong.
+
 
 ### OVRTTconsole issues
 - I honestly don't know what to type here. The console is pretty much built to work if everything is correctly set up, otherwise it shuts down. Sometimes error messages are included, but I don't think I've covered every possible thing that can go wrong with an error message. You can enable the `debug_out` option in the config file by setting it to `true` to see if you can gleam any relevant information from the additional DEBUG information.
@@ -602,6 +607,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 - As it stands right now, I don't feel much motivation to continue developing this project. As of this release, don't expect any updates, __unless a crucial security flaw is found!__ In that case, I might update the OVRTTconsole, but only to eliminate the security flaw. I will for sure update this README file if such an issue is found though, so that users can stay informed of any potential risks.
 
 - All that said, I would very much like to see this project continued, or perhaps even see a new project spawn from this general idea. This is why everything included in this project is open source.
+  - A possible avenue of improvement would likely be in separating the linear sensor from the battery and the Arduino board. This would make the box that attaches to your foot much thinner, and possibly let you use a linear sensor for each toe. The Arduino board has 8 analogue inputs so attaching more sensors should not be that difficult. Food for thought.
 
 - It was a fun ride, but I'd like to focus on a few other things now. Thanks for checking this thing out, and I wish you all the best, whether or not you decide to build this thing!
 
