@@ -539,11 +539,12 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 
 - For each foot you will make a new layer in the FX layers tab and make a blendtree inside that layer
 
-- Add the 3 blendshapes/animations to the blendtree, starting with the animation for curled toes. Don't mix and match left/right sides. The animations/blendtrees for the left foot go into the layer for the left foot only! Same for the right foot! 
+- Add the 3 blendshapes/animations to the blendtree, starting with the animation for curled toes. Don't mix and match left/right sides. The animations/blendtrees for the left foot go into the layer for the left foot only! Same for the right foot!
+  - The animations should be ordered in such a way that the curled position of the toes corresponds with the value `0.0`, and the bent position of the toes corresponds with the value `1.0`
 
-- Now add the parameter to the blendtree, again pay attention to left/right side 
+- Now add the input parameter to the blendtree, again pay attention to left/right side 
 
-- Now the blendtree should have a slider which you can control with your mouse. If you slide that slider from left to right, the parameter value should change from 0.0 to 1.0, and the animations/blendshapes tied to it should light up, depending on where the slider is located in real time
+- Now the blendtree should have a slider which you can control with your mouse. If you slide that slider from left to right, the parameter value should change from `0.0` to `1.0`, and the animations/blendshapes tied to it should light up, depending on where the slider is located in real time
 
 - It should be possible to see this change in real time, if you turn on the Game mode view in Unity by pressing the play button
 
