@@ -489,8 +489,9 @@ If you have edited the config file while the console is running, the console nee
 
 - `OSC_send_port` is the port that the OSC sender will send data through, it should equal to `9000` if OVRTTconsole is the only program that sends data to VRChat, however you should also read the recommendation below
 
-- __RECOMMENDATION:__ If you use more than one OSC input, and especially if you use multiple OSC outputs from VRChat, you should probably use some sort of OSC router. I use the OSC router that comes built in to [VRCOSC](https://github.com/VolcanicArts/VRCOSC);
-  * if you decide to use an OSC router, you will need to match the `OSC_send_port` value to whatever it is set to in the router software, my setup looks like this: [Picutre of VRCOSC and config file](Images/config_and_vrcosc.png)
+- ~~__RECOMMENDATION:__ If you use more than one OSC input, and especially if you use multiple OSC outputs from VRChat, you should probably use some sort of OSC router. I use the OSC router that comes built in to [VRCOSC](https://github.com/VolcanicArts/VRCOSC);~~
+  * ~~if you decide to use an OSC router, you will need to match the `OSC_send_port` value to whatever it is set to in the router software, my setup looks like this: [Picture of VRCOSC and config file](Images/config_and_vrcosc.png)~~
+- The above recommendation is somewhat obsolete with the introduction of OSCQuery. Since the OVRTTcosole only sends data to VRChat, no specific OSC routing should be necessary. A minor fix in v1.0.1 for the OSC sender is also included.
 
 <br>
 
@@ -586,7 +587,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 
 - Make sure the port and IP are properly set in the config file
 
-- Initially I've had issues sending test data directly to VRChat via the OVRTTconsole. I haven't been able to find the culprit, but using an OSC router seemed to fix that issue. I highly recommend using [VRCOSC](https://github.com/VolcanicArts/VRCOSC), even if you only use one device to send data, and no devices to receive OSC data. You can disable all other functionality of VRCOSC and only use the OSC router. I believe there are other OSC routers out there, but I haven't used anything other than VRCOSC.
+- ~~Initially I've had issues sending test data directly to VRChat via the OVRTTconsole. I haven't been able to find the culprit, but using an OSC router seemed to fix that issue. I highly recommend using [VRCOSC](https://github.com/VolcanicArts/VRCOSC), even if you only use one device to send data, and no devices to receive OSC data. You can disable all other functionality of VRCOSC and only use the OSC router. I believe there are other OSC routers out there, but I haven't used anything other than VRCOSC.~~ This has been fixed in version v1.0.1. You can find it in the latest release. The OVRTTconsole should now send data directly to VRChat without the need for extra routing.
 
 - Using the VRChat in-game OSC debugger can be quite helpful at troubleshooting your issues. If the OVRTT console is running as expected, you should be able to see the two parameters being sent to the game via the OVRTTconsole. If your trackers are working as expected and the configuration of the OVRTTconsole is correct, you should see the values change in real time in the VRChat OSC debugger.
 

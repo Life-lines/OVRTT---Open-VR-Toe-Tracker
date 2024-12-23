@@ -357,7 +357,7 @@ internal class OVRTTconsole
         try
         {
             Console.WriteLine($"Setting up OSC sender - IP:{oscSendIP}, Port:{oscSendPort}");
-            OSCsender = new OscSender(System.Net.IPAddress.Parse(oscSendIP), oscSendPort);
+            OSCsender = new OscSender(System.Net.IPAddress.Parse(oscSendIP), 0, oscSendPort);
             OSCsender.Connect();
         }
         catch (Exception ex)
