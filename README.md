@@ -572,6 +572,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 ---
 
 <a name="ts" />
+
 ## Troubleshooting
 
 - Make sure your batteries are charged...
