@@ -285,6 +285,10 @@ After you've confirmed your solders are good, and that the Arduino boards can bo
 
 <br>
 
+- You can also check the [Troubleshooting](#ts) section at the end of this document, where you can see a more modular setup to string and rubber band length.
+
+<br>
+
 - Get an elastic band and loop wrap it around the central pillar, so that the leftover end is pointing towards the 20mm m2 screw
 - Loop the band around the screw and onto the attachment on the sensor slider 
     - ![Elastic loop around 20mm M2 screw](Images/elastic_loop_screw.jpg)
@@ -567,7 +571,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 
 ---
 
-
+<a name="ts" />
 ## Troubleshooting
 
 - Make sure your batteries are charged...
@@ -614,10 +618,10 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 - This might happen. I suspect the original rubber band is too tight, and the plastic pin on the linear sensor can't handle the force.
   * ![broken_pin_1](https://github.com/user-attachments/assets/e26f3d8c-9e0d-4a63-acb3-49a425e8385e)
 
-- The fix I came up with relies on the fact that there is a hole in the plastic slider where the pin is supposed to be. Start by threading a sewing thread through the hole.
+- The fix I came up with relies on the fact that there is a hole in the plastic slider where the pin snapped off. Start by threading a sewing thread through the hole.
   * ![broken_pin_2](https://github.com/user-attachments/assets/c302105e-6f82-4f51-90bf-773e521c1813)
 
-- Next you will need some DIY jewlry bits, or just a simple thin metal wire that you can bend into the desired shape. These are the jewelry bits I bought at a hobby store for ~$10. You can probably get these much cheaper on aliexpress or a similar site.
+- Next you will need some DIY jewelry bits, or just a simple thin metal wire that you can bend into the desired shape. These are the jewelry bits I bought at a hobby store for ~$10. You can probably get these much cheaper on aliexpress or a similar site.
   * ![broken_pin_parts](https://github.com/user-attachments/assets/1355f19c-21e8-4fad-af75-6619ff308c44)
 - I used a different rubber band this time. It is about 1.5mm in diameter, and it appears to have 4 rubber strands inside the polyester shell. I had this laying around at home, but it can probably be bought at hobby stores and stores that sell sewing supplies.
   * ![broken_pin_parts_rb](https://github.com/user-attachments/assets/6e56daf3-3c47-4eff-b49b-74b5374de051)
@@ -632,7 +636,7 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
   * ![broken_pin_fix_2](https://github.com/user-attachments/assets/a04fcd5b-1be9-42ed-be2b-fb6ee75f394d)
 
 
-- This fix seems to be working fine. It still provides the needed tension, but at a lesser force than the green rubber bands. I can also vary the length of the rubber band, and have made a more modular design to the string with the carabiners, which should make future modifications easier.
+- This fix seems to be working fine. It still provides the needed tension, but at a lesser force than the green rubber bands. Now I can more easily vary the length of the rubber band, and have made a more modular design to the string with the carabiners, which should make future modifications easier.
 ---
 
 ## Miscellaneous 
