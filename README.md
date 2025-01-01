@@ -608,6 +608,31 @@ I know next to nothing when it comes to modifying VRChat avatars in Unity/Blende
 
 - If the console does not start after you run it, or it appears that it instantly closes, your best bet is to download the latest version of the Microsoft Visual Studio 2022 and import the project file with the source code. Visual Studio should automatically detect any missing dependencies and guide you through the installation. You can then run console through the Visual Studio debugger, to make sure it works. After a successful build with Visual Studio debugger, you can then publish the project locally on your PC to get the executable from which you'll run the console.
 
+
+### Sensor slider pin snapping off
+
+- This might happen. I suspect the original rubber band is too tight, and the plastic pin on the linear sensor can't handle the force.
+  * ![broken_pin_1](https://github.com/user-attachments/assets/e26f3d8c-9e0d-4a63-acb3-49a425e8385e)
+
+- The fix I came up with relies on the fact that there is a hole in the plastic slider where the pin is supposed to be. Start by threading a sewing thread through the hole.
+  * ![broken_pin_2](https://github.com/user-attachments/assets/c302105e-6f82-4f51-90bf-773e521c1813)
+
+- Next you will need some DIY jewlry bits, or just a simple thin metal wire that you can bend into the desired shape. These are the jewelry bits I bought at a hobby store for ~$10. You can probably get these much cheaper on aliexpress or a similar site.
+  * ![broken_pin_parts](https://github.com/user-attachments/assets/1355f19c-21e8-4fad-af75-6619ff308c44)
+- I used a different rubber band this time. It is about 1.5mm in diameter, and it appears to have 4 rubber strands inside the polyester shell. I had this laying around at home, but it can probably be bought at hobby stores and stores that sell sewing supplies.
+  * ![broken_pin_parts_rb](https://github.com/user-attachments/assets/6e56daf3-3c47-4eff-b49b-74b5374de051)
+
+- I clipped one of the carabiners' small hoops and threaded it on to the plastic slider as tightly as I could. I looped the thread 3 times through the hole and the hoop for extra strength. I wanted as little slack as possible.
+  * ![20241225_150422 jpg 6664c7ef09f040dbbeb7ecbb96fbca29](https://github.com/user-attachments/assets/5ac938a0-2577-4f31-b5ba-3fd991e5a32a)
+
+- I added one 4mm singular loop (marked as "1" in the picture below) through the one that is threaded onto the slider, then attached the string that connects to the toes on on side, and on the other side I attached the rubber band.
+  * ![broken_pin_fix_1](https://github.com/user-attachments/assets/6f5da27c-d91a-4215-a91d-7edb208fb8ee)
+
+- The rubber band loops over the sensor twice, this gives it more play and thus giving the band more length, which in turn means that it needs less force to keep the slider under constant tension. The length of the rubber band is controled by adding or removing the hoops on the end that attaches to the 20mm screw. No reprinting of the box is required, as there is already an alternative "nook" printed on the side opposite of the 20mm screw.
+  * ![broken_pin_fix_2](https://github.com/user-attachments/assets/a04fcd5b-1be9-42ed-be2b-fb6ee75f394d)
+
+
+- This fix seems to be working fine. It still provides the needed tension, but at a lesser force than the green rubber bands. I can also vary the length of the rubber band, and have made a more modular design to the string with the carabiners, which should make future modifications easier.
 ---
 
 ## Miscellaneous 
